@@ -12,6 +12,7 @@ console.log(`Name: ${student.name}, Age: ${student.age}`);
 
 console.log(student.displayInfo());
 
+//--------------------------------------------------------------
 
 const studentJSON = JSON.stringify(student);
 
@@ -22,6 +23,7 @@ const parsedStudent = JSON.parse(studentJSON);
 console.log("Parsed Object:", parsedStudent);
 console.log("Are the objects equal?", JSON.stringify(student) === JSON.stringify(parsedStudent));
 
+//--------------------------------------------------------------
 
 const { name, courses } = student;
 console.log(`Destructured Name: ${name}`);
@@ -32,6 +34,7 @@ const scores = [85, 92, 78, 90];
 const [score1, score2] = scores;
 console.log(`First Score: ${score1}, Second Score: ${score2}`);
 
+//--------------------------------------------------------------
 
 const clonedStudent = { ...student };
 
@@ -41,5 +44,21 @@ console.log("Cloned Student with New Property:", clonedStudent);
 const newCourses = ["Chemistry", "Biology"];
 const allCourses = [...student.courses, ...newCourses];
 console.log("Merged Courses Array:", allCourses);
+
+//--------------------------------------------------------------
+
+student.addCourse = function (newCourse) {
+    this.courses.push(newCourse);
+    console.log(`Course "${newCourse}" added. Updated Courses:`, this.courses);
+};
+
+student.getTotalCourses = function () {
+    return this.courses.length;
+};
+
+student.addCourse("Artificial Intelligence");
+console.log(`Total Number of Courses: ${student.getTotalCourses()}`);
+
+//--------------------------------------------------------------
 
 
