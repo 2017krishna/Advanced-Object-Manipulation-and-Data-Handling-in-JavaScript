@@ -29,12 +29,11 @@ const { name, courses } = student;
 console.log(`Destructured Name: ${name}`);
 console.log(`Destructured Courses: ${courses}`);
 
-const scores = [85, 92, 78, 90];
+const scores = [88, 76, 95, 89];
 
 const [score1, score2] = scores;
 console.log(`First Score: ${score1}, Second Score: ${score2}`);
 
-// Bonus Task: Calculate the average score using the reduce method
 const averageScore = scores.reduce((sum, score) => sum + score, 0) / scores.length;
 
 console.log(`Average Score: ${averageScore}`);
@@ -43,10 +42,10 @@ console.log(`Average Score: ${averageScore}`);
 
 const clonedStudent = { ...student };
 
-clonedStudent.graduationYear = 2025;
+clonedStudent.graduationYear = 2026;
 console.log("Cloned Student with New Property:", clonedStudent);
 
-const newCourses = ["Chemistry", "Biology"];
+const newCourses = ["Economics", "Biology"];
 const allCourses = [...student.courses, ...newCourses];
 console.log("Merged Courses Array:", allCourses);
 
@@ -61,7 +60,7 @@ student.getTotalCourses = function () {
     return this.courses.length;
 };
 
-student.addCourse("Artificial Intelligence");
+student.addCourse("Data Science"); 
 console.log(`Total Number of Courses: ${student.getTotalCourses()}`);
 
 //--------------------------------------------------------------
