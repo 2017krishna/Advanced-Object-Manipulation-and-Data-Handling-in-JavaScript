@@ -34,6 +34,11 @@ const scores = [85, 92, 78, 90];
 const [score1, score2] = scores;
 console.log(`First Score: ${score1}, Second Score: ${score2}`);
 
+// Bonus Task: Calculate the average score using the reduce method
+const averageScore = scores.reduce((sum, score) => sum + score, 0) / scores.length;
+
+console.log(`Average Score: ${averageScore}`);
+
 //--------------------------------------------------------------
 
 const clonedStudent = { ...student };
