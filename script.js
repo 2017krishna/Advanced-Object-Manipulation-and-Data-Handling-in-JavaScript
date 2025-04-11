@@ -32,3 +32,14 @@ const scores = [85, 92, 78, 90];
 const [score1, score2] = scores;
 console.log(`First Score: ${score1}, Second Score: ${score2}`);
 
+
+const clonedStudent = { ...student };
+
+clonedStudent.graduationYear = 2025;
+console.log("Cloned Student with New Property:", clonedStudent);
+
+const newCourses = ["Chemistry", "Biology"];
+const allCourses = [...student.courses, ...newCourses];
+console.log("Merged Courses Array:", allCourses);
+
+
