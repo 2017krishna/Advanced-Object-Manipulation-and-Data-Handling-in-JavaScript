@@ -1,8 +1,13 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    background-color: #4184ff;
+    color: #444;
+    line-height: 1.6;
 }
 
 h1 {
     color: #333;
+    text-align: center;
+    margin-bottom: 20px;
 }
